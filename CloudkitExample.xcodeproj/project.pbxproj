@@ -17,6 +17,12 @@
 		1814177C29BDF75000B33034 /* CloudkitExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814177B29BDF75000B33034 /* CloudkitExampleTests.swift */; };
 		1814178629BDF75000B33034 /* CloudkitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814178529BDF75000B33034 /* CloudkitExampleUITests.swift */; };
 		1814178829BDF75000B33034 /* CloudkitExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814178729BDF75000B33034 /* CloudkitExampleUITestsLaunchTests.swift */; };
+		1814179829BDFB0900B33034 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814179529BDFB0800B33034 /* Note.swift */; };
+		1814179929BDFB0900B33034 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814179629BDFB0800B33034 /* AlertService.swift */; };
+		1814179A29BDFB0900B33034 /* CKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814179729BDFB0900B33034 /* CKService.swift */; };
+		181417A029BE094900B33034 /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814179F29BE094900B33034 /* NoteService.swift */; };
+		18336E9A29D055800071DF29 /* iCloudText.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 18336E9929D055800071DF29 /* iCloudText.rtf */; };
+		1881315C29CCB495008C7AFF /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881315B29CCB495008C7AFF /* UNService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,13 @@
 		1814178129BDF75000B33034 /* CloudkitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudkitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1814178529BDF75000B33034 /* CloudkitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudkitExampleUITests.swift; sourceTree = "<group>"; };
 		1814178729BDF75000B33034 /* CloudkitExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudkitExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1814179429BDF76300B33034 /* CloudkitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudkitExample.entitlements; sourceTree = "<group>"; };
+		1814179529BDFB0800B33034 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		1814179629BDFB0800B33034 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		1814179729BDFB0900B33034 /* CKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKService.swift; sourceTree = "<group>"; };
+		1814179F29BE094900B33034 /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
+		18336E9929D055800071DF29 /* iCloudText.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = iCloudText.rtf; sourceTree = "<group>"; };
+		1881315B29CCB495008C7AFF /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +114,14 @@
 		1814176029BDF74D00B33034 /* CloudkitExample */ = {
 			isa = PBXGroup;
 			children = (
+				1814179429BDF76300B33034 /* CloudkitExample.entitlements */,
 				1814176129BDF74D00B33034 /* AppDelegate.swift */,
+				18336E9929D055800071DF29 /* iCloudText.rtf */,
 				1814176329BDF74D00B33034 /* SceneDelegate.swift */,
-				1814176529BDF74D00B33034 /* ViewController.swift */,
-				1814176729BDF74D00B33034 /* Main.storyboard */,
-				1814176D29BDF75000B33034 /* Assets.xcassets */,
-				1814176F29BDF75000B33034 /* LaunchScreen.storyboard */,
+				1814179C29BDFE8B00B33034 /* Model */,
+				1814179E29BDFEA200B33034 /* View */,
+				1814179D29BDFE9600B33034 /* Controllers */,
+				1814179B29BDFE7B00B33034 /* Services */,
 				1814177229BDF75000B33034 /* Info.plist */,
 				1814176A29BDF74D00B33034 /* CloudkitExample.xcdatamodeld */,
 			);
@@ -128,6 +143,43 @@
 				1814178729BDF75000B33034 /* CloudkitExampleUITestsLaunchTests.swift */,
 			);
 			path = CloudkitExampleUITests;
+			sourceTree = "<group>";
+		};
+		1814179B29BDFE7B00B33034 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1814179629BDFB0800B33034 /* AlertService.swift */,
+				1814179729BDFB0900B33034 /* CKService.swift */,
+				1814179F29BE094900B33034 /* NoteService.swift */,
+				1881315B29CCB495008C7AFF /* UNService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1814179C29BDFE8B00B33034 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1814179529BDFB0800B33034 /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1814179D29BDFE9600B33034 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1814176529BDF74D00B33034 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1814179E29BDFEA200B33034 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1814176729BDF74D00B33034 /* Main.storyboard */,
+				1814176D29BDF75000B33034 /* Assets.xcassets */,
+				1814176F29BDF75000B33034 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1814177129BDF75000B33034 /* LaunchScreen.storyboard in Resources */,
+				18336E9A29D055800071DF29 /* iCloudText.rtf in Resources */,
 				1814176E29BDF75000B33034 /* Assets.xcassets in Resources */,
 				1814176929BDF74D00B33034 /* Main.storyboard in Resources */,
 			);
@@ -261,9 +314,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1814179829BDFB0900B33034 /* Note.swift in Sources */,
+				1814179A29BDFB0900B33034 /* CKService.swift in Sources */,
 				1814176629BDF74D00B33034 /* ViewController.swift in Sources */,
+				1881315C29CCB495008C7AFF /* UNService.swift in Sources */,
+				181417A029BE094900B33034 /* NoteService.swift in Sources */,
 				1814176229BDF74D00B33034 /* AppDelegate.swift in Sources */,
 				1814176429BDF74D00B33034 /* SceneDelegate.swift in Sources */,
+				1814179929BDFB0900B33034 /* AlertService.swift in Sources */,
 				1814176C29BDF74D00B33034 /* CloudkitExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CloudkitExample/CloudkitExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CYN5M7KJ2P;
@@ -454,7 +513,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = RK.CloudkitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudkitexample.rk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -467,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CloudkitExample/CloudkitExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CYN5M7KJ2P;
@@ -482,7 +542,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = RK.CloudkitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudkitexample.rk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HlI-Rc-CcQ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="kPe-2q-Wq0">
+            <objects>
+                <viewController id="HlI-Rc-CcQ" customClass="ViewController" customModule="Notes_CloudPushNotification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="exu-e8-yGu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYf-fG-Z04">
+                                <rect key="frame" x="0.0" y="70" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Notes" id="ffJ-Bf-Qg0">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="BMs-1k-ylJ">
+                                            <connections>
+                                                <action selector="onComposeTapped:" destination="HlI-Rc-CcQ" id="VCa-r7-zf8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aKM-2b-vxQ">
+                                <rect key="frame" x="0.0" y="114" width="393" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="HlI-Rc-CcQ" id="Rac-VH-UXN"/>
+                                    <outlet property="delegate" destination="HlI-Rc-CcQ" id="NjW-yc-xkl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gM0-3v-aIV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aKM-2b-vxQ" secondAttribute="bottom" id="2tN-J2-S6y"/>
+                            <constraint firstItem="aKM-2b-vxQ" firstAttribute="trailing" secondItem="gM0-3v-aIV" secondAttribute="trailing" id="4Oo-uj-Ezt"/>
+                            <constraint firstItem="aKM-2b-vxQ" firstAttribute="leading" secondItem="gM0-3v-aIV" secondAttribute="leading" id="AJz-xR-nPd"/>
+                            <constraint firstItem="DYf-fG-Z04" firstAttribute="trailing" secondItem="aKM-2b-vxQ" secondAttribute="trailing" id="EGD-8I-NJs"/>
+                            <constraint firstItem="DYf-fG-Z04" firstAttribute="top" secondItem="gM0-3v-aIV" secondAttribute="top" constant="11" id="J3b-eH-eTc"/>
+                            <constraint firstItem="aKM-2b-vxQ" firstAttribute="top" secondItem="DYf-fG-Z04" secondAttribute="bottom" id="x1Z-PL-S8i"/>
+                            <constraint firstItem="DYf-fG-Z04" firstAttribute="leading" secondItem="aKM-2b-vxQ" secondAttribute="leading" id="zjb-D7-cU4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblv_notes" destination="aKM-2b-vxQ" id="xvR-CX-u7y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QAs-wz-kv1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-237" y="-177"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
